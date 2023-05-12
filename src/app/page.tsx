@@ -8,10 +8,12 @@ import {BsFiletypeTxt,BsFiletypeJpg} from 'react-icons/bs'
 
 
 export default function Home() {
-  const [uploadedFiles, setUploadedFiles] = useState([]);
-
-  const handleUpload = (file) => {
-    setUploadedFiles(prevFiles => [...prevFiles, file.name]);
+  const [uploadedFiles, setUploadedFiles] = useState <string[]>([]);
+  interface UploadButtonProps {
+    onUpload: (file: File) => void; 
+  }
+  const handleUpload = (file:File) => {
+    setUploadedFiles(prevFiles => [...prevFiles, file.name]);  
   };
 
   return (

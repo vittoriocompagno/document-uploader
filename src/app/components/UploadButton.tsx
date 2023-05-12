@@ -5,12 +5,15 @@ import {
 } from 'react-icons/bs'
 
 const icon = BsFillCloudArrowUpFill;
-
-const UploadButton = ({onUpload}) => {
+interface UploadButtonProps {
+  onUpload: (file: File) => void;
+   
+}
+const UploadButton: React.FC<UploadButtonProps> = ({onUpload}) => {
   const [fileName, setFileName] = useState("");
   
 
-  const handleFileUpload = (e) => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files !== null) {
       const file = e.target.files[0];
       setFileName(file.name);
