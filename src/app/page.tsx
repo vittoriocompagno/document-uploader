@@ -1,10 +1,8 @@
 "use client"
 import { useState } from 'react'
 import React from 'react'
-import Image from 'next/image'
-import UploadButton from './UploadButton'
-import ConfirmButton from './ConfirmButton'
-import FileList from './FileList'
+import UploadButton from './components/UploadButton'
+import ConfirmButton from './components/ConfirmButton'
 import {AiFillFilePdf,AiFillFileExcel,AiFillFileWord} from 'react-icons/ai'
 import {BsFiletypeTxt,BsFiletypeJpg} from 'react-icons/bs'
 
